@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JáquerEspeis (publicaciones antiguas, página 2) | JáquerEspeis</title>
+<link href="assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS (en)" href="en/rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS (es)" href="rss.xml">
+<link rel="canonical" href="http://www.jaquerespeis.org/index-2.html">
+<link rel="prev" href="." type="text/html">
+<link rel="next" href="index-1.html" type="text/html">
+<!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]-->
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Ir al contenido principal</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Mostrar navegación</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://www.jaquerespeis.org/">
+
+                <span id="blog-title">JáquerEspeis</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="archive.html">Archivo</a>
+                </li>
+<li>
+<a href="categories/">Etiquetas</a>
+                </li>
+<li>
+<a href="rss.xml">Canal RSS</a>
+
+                
+            </li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+            </li>
+<li><a href="http://www.jaquerespeis.org/en/" rel="alternate" hreflang="en">English</a></li>
+
+                
+                    
+                
+            </ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+            
+
+    
+<div class="postindex">
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/esblogtest-sru/" class="u-url">Test a stable release update</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                JáquerEspeis
+            </span></p>
+            <p class="dateline"><a href="posts/esblogtest-sru/" rel="bookmark"><time class="published dt-published" datetime="2016-12-16T19:12:35-06:00" title="2016-12-16 19:12">2016-12-16 19:12</time></a></p>
+        </div>
+    </header><div class="e-content entry-content">
+    <p>Ubuntu has a six month cycle for releases. This means that we work for six months updating software, adding new features and making sure that it all works consistently together when it’s integrated into the operating system, and then we release it. Once we make a release, it is considered stable and then we almost exclusively add to that release critical bug fixes and patches for security vulnerabilities. The exceptions are just a few, and are for software that’s important for Ubuntu and that we want to keep up-to-date with the latest features even in stable releases.</p>
+<p>These bug fixes, security patches and exceptional new features require a lot of testing, because right after they are published they will reach all the Ubuntu users that are in the stable release. And we want the release to remain stable, never ever introduce a regression that will make those users unhappy.</p>
+<p>We call all of them <a href="https://wiki.ubuntu.com/StableReleaseUpdates">Stable Release Updates</a>, and we test them in the <em>proposed</em> pocket of the Ubuntu archive. This is obviously not enabled by default, so the brave souls that want to help us testing the changes in proposed need to enable it.</p>
+<p>Before we go on, I would recommend to test SRUs <a href="http://elopio.net/blog/install-ubuntu-in-vm/">in a virtual machine</a>. Once you enable proposed following this guide you will get constant and untested updates from many packages, and these updates will break parts of your system every now and then. It’s not likely to be critical, but it can bother you if it happens on the machine you need to do your work, or other stuff. And if somebody makes a mistake, you might need to reinstall the system.</p>
+<p>You will also have to find a package that needs testing. <a href="http://snapcraft.io">Snapcraft</a> is one of the few exceptions allowed to land in a stable release every week. So lets use it as an example. Lets say you want to help us testing the upcoming release of snapcraft in Ubuntu 16.04.</p>
+<p>With your machine ready and before enabling proposed, install the version already released of the package you want to test. This way you’ll test later an update to the newer version, just what a normal user would get once the update is approved and lands in the archive. So in a terminal, write:</p>
+<pre><code>  $ sudo apt update
+  $ sudo apt install snapcraft</code></pre>
+<p>Or replace <em>snapcraft</em> with whatever package you are testing. If you are doing it just during the weekend after I am writing this, the released version of snapcraft will be 2.23. You can check it with:</p>
+<pre><code>  $ dpkg -s snapcraft | grep Version
+  Version: 2.23</code></pre>
+<p>Now, to enable proposed, open the <em>Ubuntu Software</em> application, and select <em>Software &amp; Updates</em> from the menu in the top of the window.</p>
+<p><a href="https://archive.org/download/elopio-screenshots2/sru/1-open_sources.png"> <img src="https://archive.org/download/elopio-screenshots2/sru/1-open_sources.png" alt="image"></a></p>
+<p>From the <em>Software &amp; Updates</em> window, select the <em>Developer Options</em> tab. And check the item that says <em>Pre-released updates</em>.</p>
+<p><a href="https://archive.org/download/elopio-screenshots2/sru/2-enable_proposed.png"> <img src="https://archive.org/download/elopio-screenshots2/sru/2-enable_proposed.png" alt="image"></a></p>
+<p>This will prompt for your password. Enter it, and then click the <em>Close</em> button. You will be asked if you want to reload your sources, so yes, click the <em>Reload</em> button.</p>
+<p><a href="https://archive.org/download/elopio-screenshots2/sru/3-reload.png"> <img src="https://archive.org/download/elopio-screenshots2/sru/3-reload.png" alt="image"></a></p>
+<p>Finally try to upgrade. If there is a newer version available in the proposed pocket for the packet you are testing, now you will get it.</p>
+<pre><code>  $ sudo apt install snapcraft
+  $ dpkg -s snapcraft | grep Version
+  Version: 2.24</code></pre>
+<p>Every time there is a proposed update, the package will have corresponding SRU bugs with the tag “verification-needed”. In the case of snapcraft this weekend, this is the bug for the 2.24 proposed update: <a href="https://bugs.launchpad.net/ubuntu/+source/snapcraft/+bug/1650632">https://bugs.launchpad.net/ubuntu/+source/snapcraft/+bug/1650632</a></p>
+<p>The SRU bugs will have instructions about how to test that the fix or the new features released are correct. Follow those steps, and if you are confident that they work as expected, change the tag to “verification-done”. If you find that the fix is not correct, change the tag to “verification-failed”. In case of doubt, you can leave a comment in the bug explaining what you tried and what you found.</p>
+<p>You can read more about SRUs in the <a href="https://wiki.ubuntu.com/StableReleaseUpdates">Stable Release Updates wiki page</a>, and also in the <a href="https://wiki.ubuntu.com/QATeam/PerformingSRUVerification">wiki page explaining how to perform verifications</a>. This last page includes a section to find packages and bugs that need verification. If you want to help the Ubuntu community, you can just jump in and start verifying some of the pending bugs. It will be highly appreciated.</p>
+<p>If you have questions or find a problem, join us in the <a href="https://rocket.ubuntu.com/channel/community">Ubuntu Rocket Chat</a>.</p>
+<div class="references">
+
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/esblogubuntu-testing-day-wrap-up-20161209/" class="u-url">Ubuntu Testing Day wrap up - Unity8 (20161209)</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                JáquerEspeis
+            </span></p>
+            <p class="dateline"><a href="posts/esblogubuntu-testing-day-wrap-up-20161209/" rel="bookmark"><time class="published dt-published" datetime="2016-12-13T15:12:13-06:00" title="2016-12-13 15:12">2016-12-13 15:12</time></a></p>
+        </div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>For the third session of the Ubuntu Testing Days,
+<a href="https://plus.google.com/+KevinGunnCanonical">Kevin Gunn</a> joined us to talk
+about the Unity8 snap.</p>
+<p>This is a thriving project with lots of things to do and bugs to uncover, so
+it's the perfect candidate for newcomers eager to help Ubuntu.</p>
+<p>If you are interested and didn't attend our meeting on Friday, click the image
+below to watch the recording.</p>
+<p><a href="https://www.youtube.com/watch?v=oGsA55RvqLI"><img alt="Alt text" src="https://img.youtube.com/vi/oGsA55RvqLI/0.jpg"></a></p>
+<p>To install Unity 8 in the Ubuntu 16.04
+<a href="http://elopio.net/blog/pristine-vm/">cloned virtual machine</a>
+that we prepared on the past session, enter the following commands in the terminal:</p>
+<pre class="code literal-block"><span></span>$ sudo add-apt-repository -u ppa:ci-train-ppa-service/stable-phone-overlay
+$ sudo apt install unity8-session-snap
+$ unity8-snap-install
+$ sudo reboot
+</pre>
+
+
+<p>After reboot, on the login screen click the Ubuntu icon next to your user name
+and change the selection to Unity 8.</p>
+<p>Kevin and his team have a
+<a href="https://docs.google.com/document/d/1o-jKITqUxRsujmN3OwRj3wRnn6dgblKuvrhKjeN8-Wc/edit#heading=h.q06bivmaid8f">google doc with the instructions to build and install the snap, and the
+current status</a>.
+If you find a bug, you can talk to the developers joining the
+<a href="http://webchat.freenode.net/?channels=#ubuntu-touch">#ubuntu-touch IRC channel on freenode</a></p>
+<p>While preparing the testing environment on this session we had a crash, and
+explained how easy it is to send the report to the Ubuntu developers by just
+clicking the <em>Report problem...</em> button. The reports from all our users
+are in the <a href="https://errors.ubuntu.com/">error tracker</a>, along with a frequency
+graph and the links to bug reports where those crashes are being fixed.</p>
+<p>We also showed two tricks to make faster and more pleasant the testing session
+in a virtual machine:</p>
+<ul>
+<li><a href="http://elopio.net/blog/setup-apt-cache/">Set up a cache for deb packages</a></li>
+<li><a href="http://askubuntu.com/questions/858649/how-can-i-copypaste-from-the-host-to-a-kvm-guest">Share the clipboard between the host and the guest</a></li>
+</ul>
+<p>Thanks to <a href="https://twitter.com/la_juyis">Julia</a>,
+<a href="https://twitter.com/rainveil">Kyle</a> and
+<a href="https://plus.google.com/+KevinGunnCanonical">Kevin</a> for the nice session.</p>
+<p>Join us again next Friday at <a href="https://ubuntuonair.com">Ubuntu On-Air</a>.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/esblogsetup-apt-cache/" class="u-url">Set up a cache for deb packages</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                JáquerEspeis
+            </span></p>
+            <p class="dateline"><a href="posts/esblogsetup-apt-cache/" rel="bookmark"><time class="published dt-published" datetime="2016-12-09T01:12:13-06:00" title="2016-12-09 01:12">2016-12-09 01:12</time></a></p>
+        </div>
+    </header><div class="e-content entry-content">
+    <p>All Linux distributions are constantly updating the versions of the packages in their archives. That’s what makes them great, lots of people working in a distributed way to let you easily update your software and get the latest features or critical bug fixes.</p>
+<p>And you should constatly update your operating system. Otherwise you’ll become an easy target for criminals exploiting known vulnerabilities.</p>
+<p>The problem, at least for me, is that I have many many Ubuntu machines in the house and my badwidth is really bad. So keeping all my real machines, virtual machines and various devices up-to-date every day has become a slow problem.</p>
+<p>The solution is to cache the downloaded deb packages. So only one machine has to make the downloads from the internet, and they will be kept in my local network to make much faster to get the packages in the other machines.</p>
+<p>So let me introduce you to <a href="https://www.unix-ag.uni-kl.de/~bloch/acng/">Apt-Cacher NG</a>.</p>
+<p>Setting it up is simple. First, choose a machine to run the cacher and store the packages. Ideally, this machine should be running all the time, and should have a good amount of storage space. I’m using my desktop as the cacher; but as soon as I update my router to one that runs Ubuntu, I will make that one the cacher.</p>
+<p>On that machine, install apt-cacher-ng:</p>
+<pre><code>  sudo apt install apt-cacher-ng</code></pre>
+<p>And that’s it. The cacher is installed and configured. Now we need the name of this machine to use it on the other ones:</p>
+<pre><code>  $ hostname
+  calchas</code></pre>
+<p>In this example, <em>calchas</em> is the name of the machine I’m using as the cacher. Take note of the name of your machine, and now, in all the other machines:</p>
+<pre><code>  $ sudo gedit /etc/apt/apt.conf.d/02proxy</code></pre>
+<p>That will create a new empty configuration file for <em>apt</em>, and open it to be edited with <em>gedit</em>, the default graphical editor in Ubuntu. In the editor, write this:</p>
+<pre><code>  Acquire::http::proxy "http://calchas.lan:3142";</code></pre>
+<p>replacing <em>calchas</em> with the name of your cacher machine, collected above. The <em>.lan</em> part is really only needed when you are setting it up in a virtual machine and the host is the same as the cacher, but it doesn’t hurt to add it on real machines. That number, <em>3142</em>, is the network port where the caching service is running, leave it unchanged.</p>
+<p>After that, the first time you update a package in your network it will be slow just as before. But all the other machines updating the same package will be very fast. I have to thank <em>apt-cacher-ng</em> for saving me many hours during my updates of the past years.</p>
+<div class="references">
+
+</div>
+    </div>
+    </article>
+</div>
+
+        <nav class="postindexpager"><ul class="pager">
+<li class="previous">
+                <a href="." rel="prev">Publicaciones posteriores</a>
+            </li>
+            <li class="next">
+                <a href="index-1.html" rel="next">Publicaciones anteriores</a>
+            </li>
+        </ul></nav>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>Publicado bajo una licencia <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International</a>. - Creado con <a href="https://getnikola.com" rel="nofollow">Nikola</a>
+            
+        </footer>
+</div>
+</div>
+
+
+            <script src="assets/js/all-nocdn.js"></script><script src="assets/js/colorbox-i18n/jquery.colorbox-es.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("es");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>

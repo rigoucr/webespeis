@@ -1,0 +1,40 @@
+<html><body><div><p>For the third session of the Ubuntu Testing Days,
+<a href="https://plus.google.com/+KevinGunnCanonical">Kevin Gunn</a> joined us to talk
+about the Unity8 snap.</p>
+<p>This is a thriving project with lots of things to do and bugs to uncover, so
+it's the perfect candidate for newcomers eager to help Ubuntu.</p>
+<p>If you are interested and didn't attend our meeting on Friday, click the image
+below to watch the recording.</p>
+<p><a href="https://www.youtube.com/watch?v=oGsA55RvqLI"><img alt="Alt text" src="https://img.youtube.com/vi/oGsA55RvqLI/0.jpg"></a></p>
+<p>To install Unity 8 in the Ubuntu 16.04
+<a href="http://elopio.net/blog/pristine-vm/">cloned virtual machine</a>
+that we prepared on the past session, enter the following commands in the terminal:</p>
+<pre class="code literal-block"><span></span>$ sudo add-apt-repository -u ppa:ci-train-ppa-service/stable-phone-overlay
+$ sudo apt install unity8-session-snap
+$ unity8-snap-install
+$ sudo reboot
+</pre>
+
+
+<p>After reboot, on the login screen click the Ubuntu icon next to your user name
+and change the selection to Unity 8.</p>
+<p>Kevin and his team have a
+<a href="https://docs.google.com/document/d/1o-jKITqUxRsujmN3OwRj3wRnn6dgblKuvrhKjeN8-Wc/edit#heading=h.q06bivmaid8f">google doc with the instructions to build and install the snap, and the
+current status</a>.
+If you find a bug, you can talk to the developers joining the
+<a href="http://webchat.freenode.net/?channels=#ubuntu-touch">#ubuntu-touch IRC channel on freenode</a></p>
+<p>While preparing the testing environment on this session we had a crash, and
+explained how easy it is to send the report to the Ubuntu developers by just
+clicking the <em>Report problem...</em> button. The reports from all our users
+are in the <a href="https://errors.ubuntu.com/">error tracker</a>, along with a frequency
+graph and the links to bug reports where those crashes are being fixed.</p>
+<p>We also showed two tricks to make faster and more pleasant the testing session
+in a virtual machine:</p>
+<ul>
+<li><a href="http://elopio.net/blog/setup-apt-cache/">Set up a cache for deb packages</a></li>
+<li><a href="http://askubuntu.com/questions/858649/how-can-i-copypaste-from-the-host-to-a-kvm-guest">Share the clipboard between the host and the guest</a></li>
+</ul>
+<p>Thanks to <a href="https://twitter.com/la_juyis">Julia</a>,
+<a href="https://twitter.com/rainveil">Kyle</a> and
+<a href="https://plus.google.com/+KevinGunnCanonical">Kevin</a> for the nice session.</p>
+<p>Join us again next Friday at <a href="https://ubuntuonair.com">Ubuntu On-Air</a>.</p></div></body></html>
